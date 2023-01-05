@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace MapPointCalculator {
     public partial class v : Form {
         public Graphics g;
@@ -25,20 +27,25 @@ namespace MapPointCalculator {
 
         private void panel1_MouseDown(object sender, MouseEventArgs e) {
             Origin = mapLogic.getNearestCity(e.X, e.Y);
+            foreach (Connection conn in mapLogic.connections) {
+                if ((conn.origin == Origin || conn.destination == Origin) && conn.lenght <= currentPlayer.trains) {
+                    connections.Add(conn);
+                }
+            }
             drawing = true;
 
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e) {
             if (drawing) {
-                panel1.Invalidate();
-                g.DrawLine(playerPen, Origin.x, Origin.y, e.X, e.Y);
                 mousePos.X = e.X;
                 mousePos.Y = e.Y;
+                panel1.Invalidate();
             }
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e) {
+            connections.Clear();
             Destination = mapLogic.getNearestCity(e.X, e.Y);
             if(Origin == Destination) {
                 drawing= false;
@@ -75,6 +82,31 @@ namespace MapPointCalculator {
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e) {
+            if (drawing) {
+                if(connections.Count == 0) {
+                    g.DrawString("Not enough train cars", new Font("Arial", 20), new SolidBrush(Color.Black), 400, 300);
+                    return;
+                }
+                g.FillEllipse(new SolidBrush(Color.Red), Origin.x - 10, Origin.y - 10, 20, 20);
+                g.DrawString(Origin.name, new Font("Arial", 10), new SolidBrush(Color.Black), Origin.x - 20, Origin.y - 20);
+                g.DrawLine(playerPen, Origin.x, Origin.y, mousePos.X, mousePos.Y);
+                foreach (Connection conn in connections) {
+                    Color color1 = Color.Gray;
+                    Color color2 = Color.Gray;
+                    if (conn.color1 != null) color1 = (Color)conn.color1;
+                    if (conn.color2 != null) color2 = (Color)conn.color2;
+                    if (conn.origin != Origin) {
+                        g.FillEllipse(new SolidBrush(Color.Red), conn.origin.x - 10, conn.origin.y - 10, 20, 20);
+                        g.DrawString(conn.origin.name, new Font("Arial", 10), new SolidBrush(Color.Black), conn.origin.x - 20, conn.origin.y - 20);
+                    } else if (conn.destination != Origin) {
+                        g.FillEllipse(new SolidBrush(Color.Red), conn.destination.x - 10, conn.destination.y - 10, 20, 20);
+                        g.DrawString(conn.destination.name, new Font("Arial", 10), new SolidBrush(Color.Black), conn.destination.x - 20, conn.destination.y - 20);
+                    }
+                    g.DrawLine(new Pen(color1, 3), conn.origin.x, conn.origin.y, conn.destination.x, conn.destination.y);
+                    if (conn.color2 != null) g.DrawLine(new Pen(color2, 3), conn.origin.x - 7, conn.origin.y + 7, conn.destination.x - 7, conn.destination.y + 7);
+                }
+                return;
+            }
             foreach (Connection connection in mapLogic.connections) {
                 Color color1 = Color.Gray;
                 Color color2 = Color.Gray;
