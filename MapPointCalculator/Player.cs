@@ -38,6 +38,7 @@ namespace MapPointCalculator {
                 case 4: return 7;
                 case 5: return 10;
                 case 6: return 15;
+                case 8: return 21;
                 default:
                 throw new ArgumentOutOfRangeException();
             }

@@ -15,8 +15,14 @@ namespace MapPointCalculator {
         List<Player> players = new List<Player>();
         Player currentPlayer;
         public v() {
-            mapLogic = new MapLogic();
+
+            
             InitializeComponent();
+            string continent = "America";
+            Form2 fore = new Form2();
+            fore.ShowDialog();
+            if(fore.DialogResult == DialogResult.OK)continent= fore.returnValue;
+            mapLogic = new MapLogic(continent);
             g = panel1.CreateGraphics();
             for (int i = 0; i < 5; i++) {
                 players.Add(new Player(i));
@@ -163,8 +169,12 @@ namespace MapPointCalculator {
         }
 
         private void btnReset_Click(object sender, EventArgs e) {
-            mapLogic = new MapLogic();
-            foreach(Player player in players) {
+            string continent = "America";
+            Form2 fore = new Form2();
+            fore.ShowDialog();
+            if (fore.DialogResult == DialogResult.OK) continent = fore.returnValue;
+            mapLogic = new MapLogic(continent);
+            foreach (Player player in players) {
                 player.points = 0;
                 player.trains = 45;
             }

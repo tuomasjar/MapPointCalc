@@ -9,11 +9,11 @@ namespace MapPointCalculator {
     internal class MapLogic {
         public List<Connection> connections;
         public List<City> cities;
-        public MapLogic() {
+        public MapLogic(string continent) {
             connections = new List<Connection>();
             cities = new List<City>();
             try {
-                using (StreamReader inputFile = File.OpenText("Cities.txt")) {
+                using (StreamReader inputFile = File.OpenText(continent+"Cities.txt")) {
                     while (!inputFile.EndOfStream) {
                         string inputLine = inputFile.ReadLine();
                         string[] parts = inputLine.Split(",");
@@ -28,7 +28,7 @@ namespace MapPointCalculator {
                 MessageBox.Show(e.Message);
             }
             try {
-                using (StreamReader inputFile = File.OpenText("Connections.txt")) {
+                using (StreamReader inputFile = File.OpenText(continent+"Connections.txt")) {
                     while (!inputFile.EndOfStream) {
                         string inputLine = inputFile.ReadLine();
                         string[] parts = inputLine.Split(",");
@@ -51,7 +51,8 @@ namespace MapPointCalculator {
             foreach(City city in cities) {
                 if(city.name==str) return city;
             }
-            return null;
+            MessageBox.Show(str);
+            throw new ArgumentOutOfRangeException();
         }
 
         public City getNearestCity(int x,int y) {
@@ -111,6 +112,7 @@ namespace MapPointCalculator {
                 case 4: return 7;
                 case 5: return 10;
                 case 6: return 15;
+                case 8: return 21;
                 default:
                 throw new ArgumentOutOfRangeException();
             }

@@ -48,7 +48,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1002, 647);
+            this.panel1.Size = new System.Drawing.Size(1185, 782);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -58,7 +58,7 @@
             // btnBlue
             // 
             this.btnBlue.BackColor = System.Drawing.Color.Blue;
-            this.btnBlue.Location = new System.Drawing.Point(68, 665);
+            this.btnBlue.Location = new System.Drawing.Point(69, 800);
             this.btnBlue.Name = "btnBlue";
             this.btnBlue.Size = new System.Drawing.Size(75, 23);
             this.btnBlue.TabIndex = 1;
@@ -68,7 +68,7 @@
             // btnRed
             // 
             this.btnRed.BackColor = System.Drawing.Color.Red;
-            this.btnRed.Location = new System.Drawing.Point(149, 665);
+            this.btnRed.Location = new System.Drawing.Point(150, 800);
             this.btnRed.Name = "btnRed";
             this.btnRed.Size = new System.Drawing.Size(75, 23);
             this.btnRed.TabIndex = 2;
@@ -78,7 +78,7 @@
             // btnGreen
             // 
             this.btnGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnGreen.Location = new System.Drawing.Point(230, 665);
+            this.btnGreen.Location = new System.Drawing.Point(231, 800);
             this.btnGreen.Name = "btnGreen";
             this.btnGreen.Size = new System.Drawing.Size(75, 23);
             this.btnGreen.TabIndex = 3;
@@ -88,7 +88,7 @@
             // btnYellow
             // 
             this.btnYellow.BackColor = System.Drawing.Color.Yellow;
-            this.btnYellow.Location = new System.Drawing.Point(311, 665);
+            this.btnYellow.Location = new System.Drawing.Point(312, 800);
             this.btnYellow.Name = "btnYellow";
             this.btnYellow.Size = new System.Drawing.Size(75, 23);
             this.btnYellow.TabIndex = 4;
@@ -98,7 +98,7 @@
             // btnBlack
             // 
             this.btnBlack.BackColor = System.Drawing.Color.Black;
-            this.btnBlack.Location = new System.Drawing.Point(392, 665);
+            this.btnBlack.Location = new System.Drawing.Point(393, 800);
             this.btnBlack.Name = "btnBlack";
             this.btnBlack.Size = new System.Drawing.Size(75, 23);
             this.btnBlack.TabIndex = 5;
@@ -108,7 +108,7 @@
             // lblBlue
             // 
             this.lblBlue.AutoSize = true;
-            this.lblBlue.Location = new System.Drawing.Point(99, 698);
+            this.lblBlue.Location = new System.Drawing.Point(100, 833);
             this.lblBlue.Name = "lblBlue";
             this.lblBlue.Size = new System.Drawing.Size(13, 15);
             this.lblBlue.TabIndex = 6;
@@ -117,7 +117,7 @@
             // lblRed
             // 
             this.lblRed.AutoSize = true;
-            this.lblRed.Location = new System.Drawing.Point(179, 698);
+            this.lblRed.Location = new System.Drawing.Point(180, 833);
             this.lblRed.Name = "lblRed";
             this.lblRed.Size = new System.Drawing.Size(13, 15);
             this.lblRed.TabIndex = 7;
@@ -126,7 +126,7 @@
             // lblGreen
             // 
             this.lblGreen.AutoSize = true;
-            this.lblGreen.Location = new System.Drawing.Point(260, 698);
+            this.lblGreen.Location = new System.Drawing.Point(261, 833);
             this.lblGreen.Name = "lblGreen";
             this.lblGreen.Size = new System.Drawing.Size(13, 15);
             this.lblGreen.TabIndex = 8;
@@ -135,7 +135,7 @@
             // lblYellow
             // 
             this.lblYellow.AutoSize = true;
-            this.lblYellow.Location = new System.Drawing.Point(341, 698);
+            this.lblYellow.Location = new System.Drawing.Point(342, 833);
             this.lblYellow.Name = "lblYellow";
             this.lblYellow.Size = new System.Drawing.Size(13, 15);
             this.lblYellow.TabIndex = 9;
@@ -144,7 +144,7 @@
             // lblBlack
             // 
             this.lblBlack.AutoSize = true;
-            this.lblBlack.Location = new System.Drawing.Point(422, 698);
+            this.lblBlack.Location = new System.Drawing.Point(423, 833);
             this.lblBlack.Name = "lblBlack";
             this.lblBlack.Size = new System.Drawing.Size(13, 15);
             this.lblBlack.TabIndex = 10;
@@ -152,7 +152,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(499, 665);
+            this.btnReset.Location = new System.Drawing.Point(500, 800);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 11;
@@ -163,7 +163,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 698);
+            this.label1.Location = new System.Drawing.Point(15, 833);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 12;
@@ -172,7 +172,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 734);
+            this.label2.Location = new System.Drawing.Point(15, 869);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 13;
@@ -181,7 +181,7 @@
             // lblTrainBlue
             // 
             this.lblTrainBlue.AutoSize = true;
-            this.lblTrainBlue.Location = new System.Drawing.Point(98, 734);
+            this.lblTrainBlue.Location = new System.Drawing.Point(99, 869);
             this.lblTrainBlue.Name = "lblTrainBlue";
             this.lblTrainBlue.Size = new System.Drawing.Size(13, 15);
             this.lblTrainBlue.TabIndex = 14;
@@ -190,7 +190,7 @@
             // lblTrainRed
             // 
             this.lblTrainRed.AutoSize = true;
-            this.lblTrainRed.Location = new System.Drawing.Point(179, 734);
+            this.lblTrainRed.Location = new System.Drawing.Point(180, 869);
             this.lblTrainRed.Name = "lblTrainRed";
             this.lblTrainRed.Size = new System.Drawing.Size(13, 15);
             this.lblTrainRed.TabIndex = 15;
@@ -199,7 +199,7 @@
             // lblTrainGreen
             // 
             this.lblTrainGreen.AutoSize = true;
-            this.lblTrainGreen.Location = new System.Drawing.Point(260, 734);
+            this.lblTrainGreen.Location = new System.Drawing.Point(261, 869);
             this.lblTrainGreen.Name = "lblTrainGreen";
             this.lblTrainGreen.Size = new System.Drawing.Size(13, 15);
             this.lblTrainGreen.TabIndex = 16;
@@ -208,7 +208,7 @@
             // lblTrainYellow
             // 
             this.lblTrainYellow.AutoSize = true;
-            this.lblTrainYellow.Location = new System.Drawing.Point(341, 734);
+            this.lblTrainYellow.Location = new System.Drawing.Point(342, 869);
             this.lblTrainYellow.Name = "lblTrainYellow";
             this.lblTrainYellow.Size = new System.Drawing.Size(13, 15);
             this.lblTrainYellow.TabIndex = 17;
@@ -217,7 +217,7 @@
             // lblTrainBlack
             // 
             this.lblTrainBlack.AutoSize = true;
-            this.lblTrainBlack.Location = new System.Drawing.Point(422, 734);
+            this.lblTrainBlack.Location = new System.Drawing.Point(423, 869);
             this.lblTrainBlack.Name = "lblTrainBlack";
             this.lblTrainBlack.Size = new System.Drawing.Size(13, 15);
             this.lblTrainBlack.TabIndex = 18;
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 781);
+            this.ClientSize = new System.Drawing.Size(1253, 923);
             this.Controls.Add(this.lblTrainBlack);
             this.Controls.Add(this.lblTrainYellow);
             this.Controls.Add(this.lblTrainGreen);
